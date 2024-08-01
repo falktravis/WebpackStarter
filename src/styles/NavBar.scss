@@ -1,0 +1,79 @@
+@import "main";
+
+.NavBar{
+    background-color: $primary;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;  
+    color: $secondary;
+
+    a{
+        text-decoration: none;
+
+        h1{
+            font-size: 3.2vw;
+            color: $secondary;
+            font-family: Plus Jakarta Sans;
+    
+            @media (max-width: 1200px){
+                font-size: 4vw;
+            }
+            @media (max-width: 768px) {
+                font-size: 5vw;
+            }
+        }
+
+    }
+
+    ul{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 1.3vw;
+
+        @media (max-width: 1200px){
+            font-size: 1.8vw;
+        }
+        @media (max-width: 768px) {
+            font-size: 3vw;
+            width: 60%;
+        }
+
+        li{
+
+            a{
+                padding: 3vh .4vw;
+                text-decoration: none;
+                color: $secondary;
+                font-family: Montserrat;
+                position: relative;
+                font-weight: 600;
+                transition: 200ms;
+                
+                &:hover{
+                    color: $highlight;
+                }
+        
+                &::after{
+                    content: '';
+                    background:$highlight;
+                    display: block;
+                    height: 0.15vw;
+                    width: 100%;
+                    transform: scaleX(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.2s ease-in-out;
+                    position: absolute;
+                }
+        
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    }
+}
