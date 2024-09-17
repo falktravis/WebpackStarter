@@ -1,10 +1,16 @@
 
-Starter File with Webpack
+# Simple Webpack Starter File for React
+Fully equipped to handle react, sass, hot reloading, and any webpack plugins 
+
+Truly unsure how one of these doesn't publicly exist already.
 
 by Travis Falk
 
--start by copying over all of the content into a new folder and then run $npm intall
--change port in output of webpack config to an unused port
--$npm run build
--$npm run serve
--create the design and set up variables for the color pallet which is outlined in the main sass file
+- pull the repo into your machine
+- $ npm install
+- change port in output of webpack config to an unused port
+Thats it.
+
+To locally host your website
+- $ npm run build
+- $ npm run serve
